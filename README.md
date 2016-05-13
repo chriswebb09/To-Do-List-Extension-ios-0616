@@ -1,4 +1,4 @@
-# To-Do-List-Extension
+# To Do List Extension
 
 ## Separate checklists based on completion status
 Add sections to the `AllListsViewController` for incomplete and complete checklists. Checklists which have not yet been completed should appear in a section titled *In Progress*. Checklists whose items have all been checked off will fall into the *Completed* section with their titles grayed out.
