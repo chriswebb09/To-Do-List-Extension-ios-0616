@@ -50,6 +50,7 @@ Here are the criteria for our multilevel list extension: Tapping on a task shoul
 	* Add a button for users to click to add subitems
 	* The sublist should show the name of the subitem
 	* Users should be able to check them off
+	* They should be able to swipe to delete
 	* Be mindful of the reuse identifiers as this is what will separate the info type in each cell
 * Add a new view controller to storyboard and connect it to a view controller class `SubItemDetailViewController`
 	* Add fields for user to input information for subitem
@@ -65,7 +66,7 @@ Here are the criteria for our multilevel list extension: Tapping on a task shoul
 ## Advanced (Optional)
 
 ### Reordering
-Find a way to enable users to reorder lists and items. [This tutorial](https://www.raywenderlich.com/63089/cookbook-moving-table-view-cells-with-a-long-press-gesture) will be of help.
+Find a way to enable users to reorder lists and items. There are multiple ways to accomplish this. Think about user experience and design. How would you want to reorder a list? One way would be to use gesture recognizers. This [tutorial](https://www.raywenderlich.com/63089/cookbook-moving-table-view-cells-with-a-long-press-gesture) walks you through what's called a long press gesture recognizer. If you choose this way read [Apple's documentation](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIGestureRecognizer_Class/) before using the recognizers to get a better idea of what you're working with. 
 
 ### Expanding table view cells
 Instead of displaying a task's sub-items as table view cells when the task is tapped, expand the task's cell and display the sub-items within that cell. This will be an exercise in googling. Look for Cocoapods to help you accomplish this portion of the assignment.
