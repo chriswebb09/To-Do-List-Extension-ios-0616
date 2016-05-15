@@ -4,21 +4,24 @@
 Before starting this lab, you should have completed Tutorial 2 of Ray Wenderlich's iOS Apprentice (Beginning iOS Development with Swift 2). That tutorial continued your introduction to the Swift programming language and introduced table views, navigation controllers, and delegates. With this extension you'll get additional practice working on these concepts. The Advanced section will also test your ability to search for and implement third-party code.
 
 ## Separate checklists based on completion status
+### Instructions
 Instead of grouping all of our checklists together, let's add sections to the `AllListsViewController` to differentiate complete checklists from those still in progress. Checklists which have not yet been completed should appear in a section titled *In Progress*. Checklists whose items have all been checked off will fall into the *Completed* section with their titles grayed out.
 
-### Update the Checklist to include a Completion Status attribute
+#### 1. Update the Checklist to include a Completion Status attribute
 * Edit the Checklist class
 * Edit the Checklist data model
 * Every time a task is completed, a check to see if the checklist is completed should be run and the isCompleted property of that checklist should be changed when necessary
 
-### Create separate sections in the AllListsViewController
-* Create two sections. Set the section header titles appropriately.
+#### 2. Create separate sections in the AllListsViewController
+* Create two sections. 
+* Set the section header titles appropriately.
 
-### Read the Completion Status of the checklists and sort them appropriately
+#### 3. Read the Completion Status of the checklists and sort them appropriately
 * Every time we load the `AllListsViewController`, the `isCompleted` property on each checklist should be read. Checklists should be sorted into the appropriate section.
 * Lists in the *Completed* section should appear visibly different from those in the *In Progress* section.
 
 ## Add sub-lists to items in the ChecklistViewController
+### Instructions
 Often times it's useful to have lists within a single task on a list. A simple example is a high-level list titled *Home*, which contains tasks such as:
 
 * Do Laundry
@@ -35,27 +38,28 @@ But what if we want more detail for a certain item on that list? Say we want to 
 
 Here are the criteria for our multilevel list extension: Tapping on a task should show its sub-items, if any exist. Tapping on a sub-item should mark it as complete. Once all sub-items are marked as complete, the task should also be marked as complete. If no sub-items exist for a task, tapping on a task should mark it as complete.
 
-### Create a new class `CheckListSubItems`
+#### 1. Create a new class `CheckListSubItems`
 * Similar to when you created the `CheckListItems`:
-	* Create appropritate `var`'s to capture appropriate sublist information
-	* Initialize with the correct sublist item ID
-* Update the `ChecklistItem` to include a `var` type of `CheckListSubItems`
+	* Create `var`'s to capture appropriate sublist information
+	* Initialize with a sublist item ID that references the list item ID
+* Update the `ChecklistItem` class to include a `var` type of `CheckListSubItems`
+* Update the data model to include your new class similar to how `CheckListItem` class is handled
 
-### Update your views
+#### 2. Update your views
 * Add an additional cell prototype to `CheckListViewController` 
-	* add a button for users to click to add subitems
-	* the sublist should show the name of the subitem
-	* users should be able to check them off
-	* be mindful of the reuse identifiers 
+	* Add a button for users to click to add subitems
+	* The sublist should show the name of the subitem
+	* Users should be able to check them off
+	* Be mindful of the reuse identifiers as this is what will separate the info type in each cell
 * Add a new view controller to storyboard and connect it to a view controller class `SubItemDetailViewController`
-	* add fields for user to input information for subitem
-	* no need for reminders
-	* your new `addSubItem` button should segue here
-	* connect your fields to IBAOutlets
+	* Add fields for user to input information for subitem
+	* No need for reminders
+	* Your new `addSubItem` button should segue here
+	* Connect your fields to IBAOutlets
 
-### Custom delegates
-* reread the section in the book about what you've done with custom delegates for the `ItemDetailViewController` to allow sending information back to the `CheckListViewController` 
-* the situation for sending information from `SubItemDetailViewController` to the `CheckListViewController` is practically identical
+#### 3. Custom delegates
+* Reread the section in the book about what you've done with custom delegates for the `ItemDetailViewController` to allow sending information back to the `CheckListViewController` 
+* The situation for sending information from `SubItemDetailViewController` to the `CheckListViewController` is practically identical
 
 
 ## Advanced (Optional)
