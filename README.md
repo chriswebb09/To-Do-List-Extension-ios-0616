@@ -35,6 +35,29 @@ But what if we want more detail for a certain item on that list? Say we want to 
 
 Here are the criteria for our multilevel list extension: Tapping on a task should show its sub-items, if any exist. Tapping on a sub-item should mark it as complete. Once all sub-items are marked as complete, the task should also be marked as complete. If no sub-items exist for a task, tapping on a task should mark it as complete.
 
+### Create a new class `CheckListSubItems`
+* Similar to when you created the `CheckListItems`:
+	* Create appropritate `var`'s to capture appropriate sublist information
+	* Initialize with the correct sublist item ID
+* Update the `ChecklistItem` to include a `var` type of `CheckListSubItems`
+
+### Update your views
+* Add an additional cell prototype to `CheckListViewController` 
+	* add a button for users to click to add subitems
+	* the sublist should show the name of the subitem
+	* users should be able to check them off
+	* be mindful of the reuse identifiers 
+* Add a new view controller to storyboard and connect it to a view controller class `SubItemDetailViewController`
+	* add fields for user to input information for subitem
+	* no need for reminders
+	* your new `addSubItem` button should segue here
+	* connect your fields to IBAOutlets
+
+### Custom delegates
+* reread the section in the book about what you've done with custom delegates for the `ItemDetailViewController` to allow sending information back to the `CheckListViewController` 
+* the situation for sending information from `SubItemDetailViewController` to the `CheckListViewController` is practically identical
+
+
 ## Advanced (Optional)
 
 ### Reordering
