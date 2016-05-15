@@ -69,4 +69,8 @@ Here are the criteria for our multilevel list extension: Tapping on a task shoul
 Find a way to enable users to reorder lists and items. There are multiple ways to accomplish this. Think about user experience and design. How would you want to reorder a list? One way would be to use gesture recognizers. This [tutorial](https://www.raywenderlich.com/63089/cookbook-moving-table-view-cells-with-a-long-press-gesture) walks you through what's called a long press gesture recognizer. If you choose this way read [Apple's documentation](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIGestureRecognizer_Class/) before using the recognizers to get a better idea of what you're working with. 
 
 ### Expanding table view cells
-Instead of displaying a task's sub-items as table view cells when the task is tapped, expand the task's cell and display the sub-items within that cell. This will be an exercise in googling. Look for Cocoapods to help you accomplish this portion of the assignment.
+Instead of displaying a task's sub-items as table view cells when the task is tapped, expand the task's cell and display the sub-items within that cell. This will be an exercise in googling. You can look for Cocoapods to help you accomplish this portion of the assignment. After you've found one, be sure and look up the exact steps for adding and using a Pod. It's not as easy as dragging and dropping a file. 
+
+*Pro tip - when it comes time to edit the PodFile in the process of adding a CocoaPod to your project, be sure and open it with Sublime Text and not TextEdit. Quotation marks are converted/handled weird and may cause problems when your program tries to read the file. 
+
+Using a CocoaPod is optional. There are plenty of resources to help with creating this effect.
