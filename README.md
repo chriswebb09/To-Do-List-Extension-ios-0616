@@ -38,27 +38,19 @@ But what if we want more detail for a certain item on that list? Say we want to 
 
 Here are the criteria for our multilevel list extension: Tapping on a task should show its sub-items, if any exist. Tapping on a sub-item should mark it as complete. Once all sub-items are marked as complete, the task should also be marked as complete. If no sub-items exist for a task, tapping on a task should mark it as complete.
 
-#### 1. Create a new class `CheckListSubItems`
-* Similar to when you created the `CheckListItems`:
-	* Create `var`'s to capture appropriate sublist information
-	* Initialize with a sublist item ID that references the list item ID
-* Update the `ChecklistItem` class to include a `var` type of `CheckListSubItems`
+#### 1. Create a new class for your sub list items
+* Create `var`'s to capture appropriate sublist information in a collection
+* Update the `ChecklistItem` class to include a `var` type of your new class
 * Update the data model to include your new class similar to how `CheckListItem` class is handled
 
 #### 2. Update your views
 * Add an additional cell prototype to `CheckListViewController` 
-	* Add a button for users to click to add subitems
-	* The sublist should show the name of the subitem
-	* Users should be able to check them off
-	* They should be able to swipe to delete
-	* Be mindful of the reuse identifiers as this is what will separate the info type in each cell
-* Add a new view controller to storyboard and connect it to a view controller class `SubItemDetailViewController`
-	* Add fields for user to input information for subitem
-	* No need for reminders
-	* Your new `addSubItem` button should segue here
-	* Connect your fields to IBAOutlets
+	* Think about what you'll need to allow the user to add items (buttons, swipe to delete, ability to check items off etc.)
+* Add a new view controller to storyboard and connect it to a new view controller class
+	* Put yourself in the user's place and think about how they'll want to add their sublists. Will it be as detailed as `ItemDetailViewController`? Probably not. But checking out what you did there is a good start.
 
 #### 3. Custom delegates
+* You'll need to pass information from the view controller where the user enters their sublist information, to where it will be displayed.
 * Reread the section in the book about what you've done with custom delegates for the `ItemDetailViewController` to allow sending information back to the `CheckListViewController` 
 * The situation for sending information from `SubItemDetailViewController` to the `CheckListViewController` is practically identical
 
