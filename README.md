@@ -8,9 +8,9 @@ Before starting this lab, you should have completed Tutorial 2 of Ray Wenderlich
 Instead of grouping all of our checklists together, let's add sections to the `AllListsViewController` to differentiate complete checklists from those still in progress. Checklists which have not yet been completed should appear in a section titled *In Progress*. Checklists whose items have all been checked off will fall into the *Completed* section with their titles grayed out.
 
 #### 1. Update the Checklist to include a Completion Status attribute
-* Edit the Checklist class
-* Edit the Checklist data model
-* Every time a task is completed, a check to see if the checklist is completed should be run and the isCompleted property of that checklist should be changed when necessary
+* Edit the Checklist class.
+* Edit the Checklist data model.
+* Every time a task is completed, a check to see if the checklist is completed should be run and the isCompleted property of that checklist should be changed when necessary.
 
 #### 2. Create separate sections in the AllListsViewController
 * Create two sections. 
@@ -24,14 +24,14 @@ Instead of grouping all of our checklists together, let's add sections to the `A
 ### Instructions
 Often times it's useful to have lists within a single task on a list. A simple example is a high-level list titled *Home*, which contains tasks such as:
 
-* Do Laundry
+>* Do Laundry
 * Clean up from last night's ice cream party
 * Locate missing ice cream scoop
 * Get Groceries
 
 But what if we want more detail for a certain item on that list? Say we want to describe all the groceries we need to speed up our shopping trip. One way to do this would be to have a list of sub-items for the *Get Groceries* task:
 
-* Get Groceries
+>* Get Groceries
   * Ice cream
   * Chocolate syrup
   * Sprinkles
@@ -69,8 +69,20 @@ Here are the criteria for our multilevel list extension: Tapping on a task shoul
 Find a way to enable users to reorder lists and items. There are multiple ways to accomplish this. Think about user experience and design. How would you want to reorder a list? One way would be to use gesture recognizers. This [tutorial](https://www.raywenderlich.com/63089/cookbook-moving-table-view-cells-with-a-long-press-gesture) walks you through what's called a long press gesture recognizer. If you choose this way read [Apple's documentation](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIGestureRecognizer_Class/) before using the recognizers to get a better idea of what you're working with. 
 
 ### Expanding table view cells
-Instead of displaying a task's sub-items as table view cells when the task is tapped, expand the task's cell and display the sub-items within that cell. This will be an exercise in googling. You can look for Cocoapods to help you accomplish this portion of the assignment. After you've found one, be sure and look up the exact steps for adding and using a Pod. It's not as easy as dragging and dropping a file. 
+Instead of displaying a task's sub-items as table view cells when the task is tapped, expand the task's cell and display the sub-items within that cell. This will be an exercise in googling. You can look for CocoaPods to help you accomplish this portion of the assignment. After you've found one, be sure and look up the exact steps for adding and using a Pod. It's not as easy as dragging and dropping a file. 
 
-*Pro tip - when it comes time to edit the PodFile in the process of adding a CocoaPod to your project, be sure and open it with Sublime Text and not TextEdit. Quotation marks are converted/handled weird and may cause problems when your program tries to read the file. 
+*Protip*: when it comes time to edit the Podfile in the process of adding a CocoaPod to your project, be sure and open it with Atom or Sublime Text, not TextEdit. Quotation marks are converted/handled weird and may cause problems when your program tries to read the file. 
 
 Using a CocoaPod is optional. There are plenty of resources to help with creating this effect.
+
+### Bling out your app
+Your To Do List app has some pretty cool functionality, but let's be honest, its looks leave a lot to be desired. Let's spice things up with some custom graphics and UI elements.
+
+First, download the free trial of [Sketch App](http://sketchapp.com), which is the hot-new-thing in the world of mobile and graphic design.
+
+>You're not required to purchase Sketch, but if you choose to do so you can submit a screenshot of your Flatiron School letter of admission to get educational discount pricing.
+
+* List Icons
+* Launch Screen image
+* App Icon
+* 
