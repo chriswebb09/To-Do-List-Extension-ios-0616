@@ -39,8 +39,7 @@ But what if we want more detail for a certain item on that list? Say we want to 
 Here are the criteria for our multilevel list extension: Tapping on a task should show its sub-items, if any exist. Tapping on a sub-item should mark it as complete. Once all sub-items are marked as complete, the task should also be marked as complete. If no sub-items exist for a task, tapping on a task should mark it as complete.
 
 #### 1. Create a new class for your sub list items
-* Create `var`'s to capture appropriate sublist information in a collection
-* Update the `ChecklistItem` class to include a `var` type of your new class
+* Create properties to capture appropriate sublist information in a collection
 * Update the data model to include your new class similar to how `CheckListItem` class is handled
 
 #### 2. Update your views
