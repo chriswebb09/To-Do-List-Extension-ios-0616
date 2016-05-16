@@ -1,7 +1,7 @@
 # To Do List Extension
 
 ## Goals
-Before starting this lab, you should have completed Tutorial 2 of Ray Wenderlich's iOS Apprentice (Beginning iOS Development with Swift 2). That tutorial continued your introduction to the Swift programming language and introduced table views, navigation controllers, and delegates. With this extension you'll get additional practice working on these concepts. The Advanced section will also test your ability to search for and implement third-party code.
+Before starting this lab, you should have completed Tutorial 2 of Ray Wenderlich's iOS Apprentice (Beginning iOS Development with Swift 2). That tutorial continued your introduction to the Swift programming language and introduced classes, subclasses, table views, navigation controllers, and delegates. With this extension you'll get additional practice working on these concepts. The Advanced section will also test your ability to search for and implement third-party code.
 
 ## Separate checklists based on completion status
 ### Instructions
@@ -38,12 +38,12 @@ But what if we want more detail for a certain item on that list? Say we want to 
 
 Here are the criteria for our multilevel list extension: Tapping on a task should show its sub-items, if any exist. Tapping on a sub-item should mark it as complete. Once all sub-items are marked as complete, the task should also be marked as complete. If no sub-items exist for a task, tapping on a task should mark it as complete.
 
-#### 1. Create a new class `CheckListSubItems`
-* Similar to when you created the `CheckListItems`:
+#### 1. Create a new class `ChecklistSubItems`
+* Similar to when you created the `ChecklistItems`:
 	* Create `var`'s to capture appropriate sublist information
 	* Initialize with a sublist item ID that references the list item ID
-* Update the `ChecklistItem` class to include a `var` type of `CheckListSubItems`
-* Update the data model to include your new class similar to how `CheckListItem` class is handled
+* Update the `ChecklistItem` class to include a `var` type of `ChecklistSubItems`
+* Update the data model to include your new class similar to how `ChecklistItem` class is handled
 
 #### 2. Update your views
 * Add an additional cell prototype to `CheckListViewController` 
@@ -66,7 +66,9 @@ Here are the criteria for our multilevel list extension: Tapping on a task shoul
 ## Advanced (Optional)
 
 ### Reordering
-Find a way to enable users to reorder lists and items. There are multiple ways to accomplish this. Think about user experience and design. How would you want to reorder a list? One way would be to use gesture recognizers. This [tutorial](https://www.raywenderlich.com/63089/cookbook-moving-table-view-cells-with-a-long-press-gesture) walks you through what's called a long press gesture recognizer. If you choose this way read [Apple's documentation](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIGestureRecognizer_Class/) before using the recognizers to get a better idea of what you're working with. 
+Find a way to enable users to reorder lists and items. There are multiple ways to accomplish this. Think about how a user will experience your app. How would you want to reorder a list?
+
+One way would be to use gesture recognizers. Read [Apple's documentation](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIGestureRecognizer_Class/) before you continue to get a sense of what gesture recognizers are and how you can use them. This [tutorial](https://www.raywenderlich.com/63089/cookbook-moving-table-view-cells-with-a-long-press-gesture) walks you through implementing a *long press gesture recognizer* to reorder cells in a table view. Try this method out, then look up alternatives. Find at least two more ways to implement list reordering and see if you can implement those, too.  
 
 ### Expanding table view cells
 Instead of displaying a task's sub-items as table view cells when the task is tapped, expand the task's cell and display the sub-items within that cell. This will be an exercise in googling. You can look for CocoaPods to help you accomplish this portion of the assignment. After you've found one, be sure and look up the exact steps for adding and using a Pod. It's not as easy as dragging and dropping a file. 
@@ -76,13 +78,22 @@ Instead of displaying a task's sub-items as table view cells when the task is ta
 Using a CocoaPod is optional. There are plenty of resources to help with creating this effect.
 
 ### Bling out your app
+>This portion of the assignment goes outside the realm of code into design. It's important to have a sense of how elements of a User Interface are built, but remember: you're here to code.
+>*Don't spend more than four hours of class time working on this section.* If you really like Sketch you're more than welcome to continue experimenting at home.
+
 Your To Do List app has some pretty cool functionality, but let's be honest, its looks leave a lot to be desired. Let's spice things up with some custom graphics and UI elements.
 
 First, download the free trial of [Sketch App](http://sketchapp.com), which is the hot-new-thing in the world of mobile and graphic design.
 
 >You're not required to purchase Sketch, but if you choose to do so you can submit a screenshot of your Flatiron School letter of admission to get educational discount pricing.
 
+Try improving or adding these UI elements:
+
 * List Icons
 * Launch Screen image
 * App Icon
-* 
+
+
+[Sketch App Documentation](https://www.sketchapp.com/learn/documentation/)
+
+[Sketch App Sources - Tutorials and Tips](http://www.sketchappsources.com/tutorials-tips.html)
