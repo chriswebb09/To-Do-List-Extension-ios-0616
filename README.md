@@ -13,7 +13,7 @@ Instead of grouping all of our checklists together, let's add sections to the `A
 * Every time a task is completed, a check to see if the checklist is completed should be run and the isCompleted property of that checklist should be changed when necessary.
 
 #### 2. Create separate sections in the AllListsViewController
-* Create two sections. 
+* Create two sections.
 * Set the section header titles appropriately.
 
 #### 3. Read the Completion Status of the checklists and sort them appropriately
@@ -38,28 +38,19 @@ But what if we want more detail for a certain item on that list? Say we want to 
 
 Here are the criteria for our multilevel list extension: Tapping on a task should show its sub-items, if any exist. Tapping on a sub-item should mark it as complete. Once all sub-items are marked as complete, the task should also be marked as complete. If no sub-items exist for a task, tapping on a task should mark it as complete.
 
-#### 1. Create a new class `ChecklistSubItems`
-* Similar to when you created the `ChecklistItems`:
-	* Create `var`'s to capture appropriate sublist information
-	* Initialize with a sublist item ID that references the list item ID
-* Update the `ChecklistItem` class to include a `var` type of `ChecklistSubItems`
-* Update the data model to include your new class similar to how `ChecklistItem` class is handled
+#### 1. Create a new class for your sub list items
+* Create properties to capture appropriate sublist information in a collection
+* Update the data model to include your new class similar to how `CheckListItem` class is handled
 
 #### 2. Update your views
-* Add an additional cell prototype to `CheckListViewController` 
-	* Add a button for users to click to add subitems
-	* The sublist should show the name of the subitem
-	* Users should be able to check them off
-	* They should be able to swipe to delete
-	* Be mindful of the reuse identifiers as this is what will separate the info type in each cell
-* Add a new view controller to storyboard and connect it to a view controller class `SubItemDetailViewController`
-	* Add fields for user to input information for subitem
-	* No need for reminders
-	* Your new `addSubItem` button should segue here
-	* Connect your fields to IBAOutlets
+* Add an additional cell prototype to `CheckListViewController`
+	* Think about what you'll need to allow the user to add items (buttons, swipe to delete, ability to check items off etc.)
+* Add a new view controller to storyboard and connect it to a new view controller class
+	* Put yourself in the user's place and think about how they'll want to add their sublists. Will it be as detailed as `ItemDetailViewController`? Probably not. But checking out what you did there is a good start.
 
 #### 3. Custom delegates
-* Reread the section in the book about what you've done with custom delegates for the `ItemDetailViewController` to allow sending information back to the `CheckListViewController` 
+* You'll need to pass information from the view controller where the user enters their sublist information, to where it will be displayed.
+* Reread the section in the book about what you've done with custom delegates for the `ItemDetailViewController` to allow sending information back to the `CheckListViewController`
 * The situation for sending information from `SubItemDetailViewController` to the `CheckListViewController` is practically identical
 
 
@@ -71,9 +62,9 @@ Find a way to enable users to reorder lists and items. There are multiple ways t
 One way would be to use gesture recognizers. Read [Apple's documentation](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIGestureRecognizer_Class/) before you continue to get a sense of what gesture recognizers are and how you can use them. This [tutorial](https://www.raywenderlich.com/63089/cookbook-moving-table-view-cells-with-a-long-press-gesture) walks you through implementing a *long press gesture recognizer* to reorder cells in a table view. Try this method out, then look up alternatives. Find at least two more ways to implement list reordering and see if you can implement those, too.  
 
 ### Expanding table view cells
-Instead of displaying a task's sub-items as table view cells when the task is tapped, expand the task's cell and display the sub-items within that cell. This will be an exercise in googling. You can look for CocoaPods to help you accomplish this portion of the assignment. After you've found one, be sure and look up the exact steps for adding and using a Pod. It's not as easy as dragging and dropping a file. 
+Instead of displaying a task's sub-items as table view cells when the task is tapped, expand the task's cell and display the sub-items within that cell. This will be an exercise in googling. You can look for CocoaPods to help you accomplish this portion of the assignment. After you've found one, be sure and look up the exact steps for adding and using a Pod. It's not as easy as dragging and dropping a file.
 
-*Protip*: when it comes time to edit the Podfile in the process of adding a CocoaPod to your project, be sure and open it with Atom or Sublime Text, not TextEdit. Quotation marks are converted/handled weird and may cause problems when your program tries to read the file. 
+*Protip*: when it comes time to edit the Podfile in the process of adding a CocoaPod to your project, be sure and open it with Atom or Sublime Text, not TextEdit. Quotation marks are converted/handled weird and may cause problems when your program tries to read the file.
 
 Using a CocoaPod is optional. There are plenty of resources to help with creating this effect.
 
