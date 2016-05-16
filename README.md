@@ -69,12 +69,12 @@ Instead of displaying a task's sub-items as table view cells when the task is ta
 Using a CocoaPod is optional. There are plenty of resources to help with creating this effect.
 
 ### Bling out your app
->This portion of the assignment goes outside the realm of code into design. It's important to have a sense of how elements of a User Interface are built, but remember: you're here to code.
->*Don't spend more than four hours of class time working on this section.* If you really like Sketch you're more than welcome to continue experimenting at home.
-
 Your To Do List app has some pretty cool functionality, but let's be honest, its looks leave a lot to be desired. Let's spice things up with some custom graphics and UI elements.
 
-First, download the free trial of [Sketch App](http://sketchapp.com), which is the hot-new-thing in the world of mobile and graphic design.
+>This portion of the assignment goes outside the realm of code and into design. It's important to have a sense of how elements of a User Interface are built, but remember: you're here to code.
+>*Don't spend more than four hours of class time working on this section.* If you really like Sketch you're more than welcome to continue experimenting at home.
+
+First, download the 14 day free trial of [Sketch App](http://sketchapp.com), the hot-new-thing in the world of mobile and graphic design.
 
 >You're not required to purchase Sketch, but if you choose to do so you can submit a screenshot of your Flatiron School letter of admission to get educational discount pricing.
 
@@ -84,7 +84,8 @@ Try improving or adding these UI elements:
 * Launch Screen image
 * App Icon
 
+Many tutorials and resources exist for Sketch. Read through [this tutorial](https://medium.com/sketch-tricks/creating-a-vector-logo-in-sketch-3-6d67e72a1449#.uigu1hc59) on Medium to get started. This [Ray Wenderlich](https://www.raywenderlich.com/117609/sketch-indie-developers) tutorial will guide you through creating basic UI elements for your iOS app. When you're ready to create a custom icon for your app, check out [this tutorial](http://designmodo.com/icon-design-sketch/).
 
-[Sketch App Documentation](https://www.sketchapp.com/learn/documentation/)
+A few more resources you can browse to familiarize yourself with Sketch are the [official documentation](https://www.sketchapp.com/learn/documentation/) and the [Sketch App Sources](http://www.sketchappsources.com/tutorials-tips.html) website.
 
-[Sketch App Sources - Tutorials and Tips](http://www.sketchappsources.com/tutorials-tips.html)
+Remember: It's good to know how to design your own UI, but the code behind it should be your primary focus.
